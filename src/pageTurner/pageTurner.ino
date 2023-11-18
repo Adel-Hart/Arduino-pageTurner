@@ -1,6 +1,6 @@
 #include <BleKeyboard.h>
 
-const int timeInterval = 500;
+const int timeInterval = 200;
 
 const int statusLed = 14; //status led pin 
 const int btn_pageNext = 4;
@@ -58,11 +58,11 @@ void turnPrev(){ //send a command means "pageUp"
   bleKeyBoard.write(KEY_PAGE_UP );
 }
 
-void led_blinking(){ //blinking led while waitng connect, !! use delay 1000ms(1s) !!
+void led_blinking(){ //blinking led while waitng connect, !! use delay 300ms(0.3s) !!
   digitalWrite(statusLed, HIGH);
-  delay(500);
+  delay(150);
   digitalWrite(statusLed, LOW);
-  delay(500);
+  delay(150);
 }
 
 void led_pop(){ //blink led once for display pressed, !! use delay 100ms (0.1s) !!
